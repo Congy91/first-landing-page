@@ -25,7 +25,7 @@ ul {
 .links{
     display: flex;
     flex: 3;
-    gap: 16px;
+    gap: 50px;
     justify-content: flex-end;
 }
 
@@ -40,6 +40,10 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #1F2937;
+    padding: 20px 0px;
 }
 
 .space{
@@ -68,6 +72,41 @@ ul {
         width: 90%;
         gap: 20px;
     }
+
+    .card-img{
+        display: flex;
+        flex: 3;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quote{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        background-color: #E5E7EB;
+    }
+    
+    .quote>p{
+        width: 80%;
+        font-size: 22px;
+        font-weight: light;
+        color: #1F2937;
+        font-style: italic;
+    }
+    
+    .author{
+        text-align: end;
+        font-size: 32px;
+        font-weight: bold;
+        color: #1F2937;
+        font-style: italic;
+        width: 80%;
+    }
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -75,7 +114,7 @@ ul {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        align-items:center;
+        align-items: center;
         padding: 100px 0px;
     }
 
@@ -85,20 +124,71 @@ ul {
         flex-flow: column wrap;
         align-items:center;
         flex: 3;
-        font-size: 20px;
+        font-size: 18px;
         color: #E5E7EB;
         margin-bottom: 40px;
         width: 90%;
         gap: 20px;
     }
+
+    .card-title{
+        font-size: 48px;
+        margin-right: 50px;
+    }
+
+    .card-img{
+        display: flex;
+        flex: 3;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quote{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        background-color: #E5E7EB;
+    }
+    
+    .quote>p{
+        width: 80%;
+        font-size: 22px;
+        font-weight: light;
+        color: #1F2937;
+        font-style: italic;
+    }
+    
+    .author{
+        text-align: end;
+        font-size: 32px;
+        font-weight: bold;
+        color: #1F2937;
+        font-style: italic;
+        width: 80%;
+    }
+
 }
+
+
+@media only screen and (max-width: 1172px) {
+    .card-title{
+        font-size: 32px;
+        font-weight: 900;
+        color: #F9FAF8;
+        width: 75%;
+    }
+}
+
 
 @media only screen and (min-width: 944px) {
     .hero-card{
         display: flex;
         flex-flow: row wrap;
-        align-items:center;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
         padding: 100px 0px;
         min-width: 50%;
     }
@@ -106,28 +196,54 @@ ul {
     .card-text{
         text-align: start;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         align-items:start;
         flex: 3;
-        font-size: 20px;
+        font-size: 18px;
         color: #E5E7EB;
         margin-bottom: 10px;
-        width: 90%;
+        /* padding-right: 50px; */
         gap: 20px;
     }
-}
 
-.card-img{
-    display: flex;
-    flex: 3;
-    min-height: 275px;
-    min-width: 450px;
+    .card-img{
+        display: flex;
+        flex: 3;
+        justify-content: flex-end;
+    }
+
+    .quote{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        background-color: #E5E7EB;
+    }
+    
+    .quote>p{
+        width: 70%;
+        font-size: 36px;
+        font-weight: light;
+        color: #1F2937;
+        font-style: italic;
+    }
+    
+    .author{
+        text-align: end;
+        font-size: 32px;
+        font-weight: bold;
+        color: #1F2937;
+        font-style: italic;
+        width: 80%;
+    }
+
 }
 
 img{
-    width: 100%;
-    height: 100%;
-    object-fit:contain;
+    width: 80%;
+    height: 80%;
 }
 
 .card-btn{
@@ -140,16 +256,17 @@ img{
     font-size: 18px;
 }
 
-.card-title{
-    font-size: 48px;
-    font-weight: 900;
-    color: #F9FAF8;
-    width: 75%;
+.random-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .random-info h2{
     text-align: center;
-    padding: 48px 0px;
+    padding-top: 50px;
+    padding-bottom: 75px;
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
@@ -165,18 +282,63 @@ img{
 
 .info-card{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
-    height: 200px;
-    width: 150px;
+    gap: 25px;
+    height: 400px;
+    width: 300px;
 }
 
 .info-card p{
     text-align: center;
+    color: #1F2937;;
 }
 
 .box{
     height: 150px;
     width: 150px;
-    border: 3px solid #3882F6;
+    /* border: 3px solid grey; */
     border-radius: 10px;
 }
+
+.cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.call-to-action{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #3882F6;
+    border-radius: 10px;
+    padding: 50px 75px;
+    width: 70%;
+    color: white;
+}
+
+.call{
+    width: 70%;
+}
+
+.call-to-action > button{
+    border: 2px solid white;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #1F2937;
+    color: white;
+}
+
+button:hover{
+    background-color: #3881f67c;
+    cursor: pointer;
+}
+
